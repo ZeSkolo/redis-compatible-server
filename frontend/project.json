@@ -1,0 +1,37 @@
+{
+  "repo": "redis-compatible-server",
+  "title": "Redis console",
+  "subtitle": "Inspect keys, run commands and watch values expire.",
+  "tools": [
+    {
+      "id": "redis",
+      "kind": "redis",
+      "title": "Key-value console",
+      "description": "Use the original Python Redis runtime, with real values and expiry.",
+      "actions": [
+        {
+          "id": "command",
+          "label": "Run command",
+          "fields": [
+            {
+              "key": "command",
+              "label": "Redis command",
+              "type": "text",
+              "value": "PING",
+              "hint": "Try SET greeting hello EX 60, then GET greeting."
+            }
+          ]
+        },
+        {
+          "id": "keys",
+          "label": "Inspect keys",
+          "fields": []
+        }
+      ],
+      "base": "."
+    }
+  ],
+  "previews": [],
+  "runtime": "Python Redis twin \u00b7 In-memory keys \u00b7 This UI does not connect to the separate Java/TCP server",
+  "port": 8101
+}
